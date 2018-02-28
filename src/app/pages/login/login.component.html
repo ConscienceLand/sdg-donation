@@ -1,0 +1,16 @@
+<div class="top-padding">
+    <div class="container">
+
+        <h1>{{"Login" | translate}}</h1>
+
+        <form action="" method="post" class="form">
+            <input type="text" [placeholder]="'DonationCode'|translate" name="code"  [(ngModel)]="input.code" class="field">
+            <input type="submit" (click)="login()" class="btn" [value]="'Login'|translate">
+        </form>
+
+        <div class="pass-link">
+            <a [routerLink]="['/register']" >{{"LoginToRegisterLink" | translate}}</a>
+        </div>
+
+    </div>
+</div>

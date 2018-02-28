@@ -1,0 +1,179 @@
+.navbar {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar .nav > li > a{
+  color: white;
+}
+
+.navbar .navbar-header > a{
+  color: white;
+}
+
+#header-cont {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  background-color:#03A9F4;
+  color: white;
+}
+
+#know-button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#know-button:hover {
+  background-color: #fff;
+  color: #03A9F4;
+}
+
+#info {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #4CAF50; 
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+#me-cont #team {
+  margin-top: 30px;
+}
+
+#donate {
+  background-color: #d50000;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  color: white;
+}
+
+
+#history {
+  background-color: #9C27B0;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.typed {
+  font-weight: bold;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+// table mixin
+
+$primary-color: #008cba;
+$gray-color: #ddd;
+$medium-up: 600px;
+$large-up: 1000px;
+$global-radius: 4px;
+
+
+@mixin heading-font-regular {
+	  font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	float: left;
+   margin: 0 0 2em;
+	thead {
+		border-bottom: 3px solid $primary-color;
+		th {
+			padding: 0.35em 0 .35em;
+       font-weight: 400;
+			text-align: left;
+			@include heading-font-regular;
+			font-size: 1.25em;
+		}
+		
+	}
+
+	tbody {
+		border-bottom: 3px solid $primary-color;
+		tr {
+			border-bottom: 2px solid #ddd;
+       
+			td {
+				padding: .75em 0;
+
+				a {
+					color: $primary-color;
+					text-decoration: none;
+					display: inline-block;
+					margin: 0 .5em 0 0;
+					&:hover, &:active, &:focus {
+						color: darken($primary-color, 10%);
+						border: none;
+					}
+				}
+			}
+		}
+	}
+
+	tfoot {
+		td {
+			padding: 0.35em 0 .35em;
+
+			text-align: left;
+			@include heading-font-regular;
+			font-size: 1.25em;
+		}
+	}
+}
+
+@media screen and (min-width: $large-up) {
+  table {
+		width: 100%;
+
+		thead {
+			border-bottom: 3px solid $primary-color;
+			th {
+			}
+			
+		}
+
+		tbody {
+			tr {
+				border-bottom: 1px solid #ddd;
+				td {
+					
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,13 @@
+{
+  "Welcome": "Welcome",
+	"Login": "Login",
+  "DonationCode": "Donation Code",
+  "LoginToRegisterLink": "Don't have an account? Register!",
+  "Register": "Register",
+  "RegisterToLoginLink": "Already have an account? Login!",
+  "Account": "Account",
+  "Email": "Email",
+  "CheckYourEmai": "Check your Email!",
+  "Success": "Success",
+  "Error": "Error"
+}
