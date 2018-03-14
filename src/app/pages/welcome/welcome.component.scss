@@ -1,7 +1,47 @@
-.welcome {
-	  height:110px;
-	  width:190px;
-	  margin:auto;
-	  border:1px #CCC solid;
-	  padding:10px;
+.background-earth {
+    background: #e2e2e2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.welcome-buttons {
+    position: absolute;
+    bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+
+/* Slide animation  */
+.page-hero {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.page-hero h1 {
+    color: #fff;
+    animation:
+    slideUp 0.75s .5s cubic-bezier(0.17,.88,.32,1.27) both,
+    fadeIn .25s .5s ease-in both;
+    padding: 0 20px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 3px 3px 7px rgba(225,225,225,.61);
+    top: 50%;
+    width: 100%;
+}
+
+@keyframes slideUp {
+    from {transform: translateY(200%);}
+    to {transform:translateY(-50%);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
