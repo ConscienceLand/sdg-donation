@@ -1,3 +1,22 @@
-<p>
-  donation works!
-</p>
+
+<div class="background-earth">
+
+<div class="page-hero">
+    <div class="container">
+        <h2>Please Select a Crypto Currency<p class="lead">Thank you!!</p></h2>
+        <div class="row text-center" >
+            <div class="col-lg-3 col-sm-4 col-xs-6" *ngFor="let crypto of cryptos">
+                <div (click)="gotoCurrency(crypto)" class="thumbnail">
+                    <img src="../../assets/img/currencies/{{crypto}}.png" class="thumbnail img-responsive glyphicon">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="earth">
+        <div class="earth--shadow"></div>
+    </div>
+    <div class="moon"></div>
+    <div class="stars"></div>
+</div>
+
+</div>
