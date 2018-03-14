@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { QRCodeModule } from 'angularx-qrcode';
+
+
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -28,6 +31,7 @@ let routes = [
     { path: "register", component: RegisterComponent },
     { path: "account", component: AccountComponent },
     { path: "donation", component: DonationComponent },
+    { path: "donation/:currency", component: CurrencyComponent }
 
 ];
 
@@ -48,6 +52,7 @@ export const createTranslateLoader = (http: HttpClient) => {
     imports: [
         BrowserModule,
         FormsModule,
+        QRCodeModule,
         HttpClientModule,
         TranslateModule.forRoot({
             loader: {
