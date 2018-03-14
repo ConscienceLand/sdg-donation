@@ -1,3 +1,42 @@
-<p>
-  currency works!
-</p>
+<div class="background-earth">
+    <div class="earth">
+        <div class="earth--shadow"></div>
+    </div>
+    <div class="moon"></div>
+    <div class="stars"></div>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>{{selectedCurrency}} Details</h1>
+            <table id="settings">
+                <tr>
+                    <td>Currency:</td> <td><input type="text" id="qrWidth" value="{{selectedCurrency}}"/></td>
+                    <td id="generateCell" rowspan="7" valign="top"><div id="qr">
+                        <div class="bg">
+
+                            <qrcode [qrdata]="angularxQrCode" [size]="256" [level]="'M'"></qrcode>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address:</td> <td><input type="text" id="qrHeight" value="kadfkdjafdljafd93343"/></td>
+                </tr>
+                <tr>
+                    <td>Field 1:</td> <td><input type="text" id="qrColor" value="no data"/></td>
+                </tr>
+                <tr>
+                    <td>Field 2: </td> <td><input type="text" id="qrBgColor" value="no data"/></td>
+                </tr>
+                <tr>
+                    <td>Field 3:</td> <td><input type="text" id="qrUrl" value="no data"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input id="generate" type="submit" value="Generate" /></td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+</div>
