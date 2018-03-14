@@ -1,0 +1,78 @@
+/* add a little bottom space under the images */
+.thumbnail {
+	  /* margin-bottom:7px; */
+    margin:7px;
+    cursor: pointer;
+
+}
+
+.center {
+    margin: auto
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    color: #a972cb;
+    margin-top: 50px;
+    padding: 30px;
+    border-left: 8px solid #ef6eae;
+    background: linear-gradient(to right, #162843 , #17181c);
+    background-color: gray;
+    z-index: 1000000;
+    position: relative;
+    opacity:0.8 !important;
+}
+
+.glyphicon {
+    background:#111;
+    color:#fff;
+    padding:20px;
+    margin:20px;
+    border:5px #338899 solid;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -o-border-radius:50%;
+    transition: all 800ms ease-in-out;
+}
+.glyphicon:hover {
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    border:10px #773355 solid;
+    padding:15px;
+}
+
+
+
+.page-hero .container {
+    color: #fff;
+    animation:
+    slideUp 0.75s .5s cubic-bezier(0.17,.88,.32,1.27) both,
+    fadeIn .25s .5s ease-in both;
+    padding: 0 20px;
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 400px;
+    z-index: 10000;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+    text-shadow: 3px 3px 7px rgba(225,225,225,.61);
+}
+
+@keyframes slideUp {
+    from {transform: translateY(200%);}
+    to {transform:translateY(-50%);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
