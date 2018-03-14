@@ -6,11 +6,34 @@
     </div>
 </nav>
 
-<div class="container-fluid" id="header-cont">
-    <h1 style="text-align: center">Some fancy jquery <span ></span></h1>
+<div id="header-cont">
+    <div class="background-earth">
+        <div class="earth">
+            <div class="earth--shadow"></div>
+        </div>
+        <div class="moon"></div>
+        <div class="stars"></div>
+        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+    </div>
 </div>
 
 <div class="container-fluid" id="info">
+    <div class="wrapper">
+        <div class="bubble-container">
+            <ul class="bg-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-6 about-us">
@@ -28,9 +51,7 @@
 <div class="container-fluid" id="donate">
     <h2 style="text-align: center" id="works-title">Support</h2>
     <div class="container text-center">
-
-        <input type="submit" (click)="donation()" class="btn" value="Donate Here">
-
+        <button class="pulse donate-button" (click)="donation()">Donate Here</button>
     </div>
 </div>
 
