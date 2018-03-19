@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Ksdfdsffkinknv</a>
+            <a class="navbar-brand" href="#">{{'AccountTitle'|translate}}</a>
         </div>
     </div>
 </nav>
@@ -37,81 +37,58 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 about-us">
-                <h2>About Us</h2>
-                <h3>We are a experienced team that understand all sides of the world</h3>
-                <h3>Our team is made up of passionate indviduals all over the world, and ddad ldfkd sldfkd erer ldf.</h3>
+                <h1>{{'AboutUsTitle'|translate}}</h1>
+                <h4>{{'AboutUsText'|translate}}</h4>
             </div>
-            <div class="col-sm-6 grid">
+
+            <div class="col-sm-6">
                 <!-- some icons -->
+
+                <!-- <img class="gif" src="./assets/img/SD-Small.gif"> -->
             </div>
         </div>
     </div>
 </div>
 
 <div class="container-fluid" id="donate">
-    <h2 style="text-align: center" id="works-title">Support</h2>
-    <div class="container text-center">
-        <button class="pulse donate-button" (click)="donation()">Donate Here</button>
+    <h2 style="text-align: center" id="works-title">{{'SupportTitle'|translate}}</h2>
+    <h4 style="text-align: center">{{'SupportText'|translate}}</h4>
+    <div class="container please-center">
+        <button class="pulse donate-button " (click)="gotoDonation()">{{'DonateHere'|translate}}</button>
     </div>
 </div>
 
-<div class="container-fluid" id="history">
-    <div class="container">
+<div class="container-fluid" id="history" >
+    <div class="container" *ngIf="!gotHistory">
+
+        <div class="please-center">
+            <h2 class="fa fa-arrow-up fa-2x arrow bounce"></h2>
+            <h2>No History Yet</h2>
+
+            <!-- <p class="fa fa-arrow-up fa-2x arrow bounce"></p> -->
+        </div>
+
+    </div>
+    <div class="container" *ngIf="gotHistory">
         <div class="row">
             <div class="col-sm-6">
-                <h3>History</h3>
-                <h3>Thank you for your support</h3>
-                <div class="row" id="social">
-                    <div class="col-sm-3">
-                        <a href="facebook.com" class="btn btn-default btn-block"><i class="fa fa-facebook fa-2x"></i></a>
-                    </div>
-                    <div class="col-sm-3">
-                        <a href="twitter.com" class="btn btn-default btn-block"><i class="fa fa-twitter fa-2x"></i></a>
-                    </div>
-                    <div class="col-sm-3">
-                        <a href="https://github.com/imadmk" class="btn btn-default btn-block"><i class="fa fa-github fa-2x"></i></a>
-                    </div>
-                </div>
+                <h2>{{'HistoryTitle'|translate}}</h2>
+                <h4>{{'HistoryText'|translate}}</h4>
             </div>
             <div class="col-sm-6" id="contact-form">
                 <table id="rwd-table">
                     <thead>
                         <tr>
-                            <th>Date</th>
-                            <th>Asset</th>
-                            <th>Amount</th>
+                            <th>{{'Date'|translate}}</th>
+                            <th>{{'Asset'|translate}}</th>
+                            <th>{{'Amount'|translate}}</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Data Col 1a</td>
-                            <td>Data Col 2a</td>
-                            <td>Data Col 3a</td>
-                        </tr>
-                        <tr>
-                            <td>Data Col 1b</td>
-                            <td>Data Col 2b</td>
-                            <td>Data Col 3b</td>
-                        </tr>
-                        <tr>
-                            <td>Data Col 1c</td>
-                            <td>Data Col 2c</td>
-                            <td>Data Col 3c</td>
-                        </tr>
-                        <tr>
-                            <td>Data Col 1d</td>
-                            <td>Data Col 2d</td>
-                            <td>Data Col 3d</td>
-                        </tr>
-                        <tr>
-                            <td>Data Col 1e</td>
-                            <td>Data Col 2e</td>
-                            <td>Data Col 3e</td>
-                        </tr>
-                        <tr>
-                            <td>Data Col 1f</td>
-                            <td>Data Col 2f</td>
-                            <td>Data Col 3f</td>
+                        <tr *ngFor="let donation of donationHistoryList">
+                            <td>{{donation.created_at|date: 'dd/MM/yyyy'}}</td>
+                            <td>{{donation.currency}}</td>
+                            <td>{{donation.amount/100000000}}</td>
                         </tr>
                     </tbody>
                 </table>
