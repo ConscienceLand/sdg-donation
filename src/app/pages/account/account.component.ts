@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-
+import { DonationService } from '../../service/donation.service'
+import { TranslateService } from '@ngx-translate/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
     selector: 'app-account',
@@ -9,15 +11,35 @@ import { Router } from "@angular/router";
 })
 export class AccountComponent implements OnInit {
 
-    constructor(private router: Router) { }
+    constructor(private router: Router, public donation: DonationService, public translate: TranslateService, private cookieService: CookieService) { }
 
-    // check for history API
+		public donationHistoryList: any;
+    public gotHistory: boolean = true;
+
     ngOnInit() {
-        this.consoleText(['Hello World.', 'Console Text', 'Made with Love.'], 'text',['tomato','rebeccapurple','lightblue']);
+        this.translate.get('AccountRollingText1').subscribe((res: string) => {
+            console.log(res);
+            this.consoleText([res, res, res], 'text',['tomato','rebeccapurple','lightblue']);
+        });
+
+        // need check
+        let code = this.cookieService.get('code');
+
+        // Test code: SU677A7ESQZVT7BSZ5Y55S9CWBJF29
+				this.donation.deposits(code).then((response:any)=>{
+            //testing
+            console.log(response.result);
+
+            // No history/deposits
+            if(response.result.length == 0)
+                this.gotHistory = false;
+            else
+	            this.donationHistoryList = response.result;
+        });
     }
 
 
-    public donation() {
+    public gotoDonation() {
         this.router.navigate(["/donation"]);
     }
 
