@@ -3,7 +3,10 @@
 	  /* margin-bottom:7px; */
     margin:7px;
     cursor: pointer;
+}
 
+.background-earth {
+    overflow: scroll;
 }
 
 .center {
@@ -16,15 +19,12 @@
     margin-right: auto;
 }
 
-.container {
-    color: #a972cb;
-    margin-top: 50px;
+.container {color: #a972cb;
+    margin-top: 100px;
     padding: 30px;
     border-left: 8px solid #ef6eae;
     background: linear-gradient(to right, #162843 , #17181c);
     background-color: gray;
-    z-index: 1000000;
-    position: relative;
     opacity:0.8 !important;
 }
 
@@ -50,29 +50,8 @@
 
 
 
-.page-hero .container {
-    color: #fff;
-    animation:
-    slideUp 0.75s .5s cubic-bezier(0.17,.88,.32,1.27) both,
-    fadeIn .25s .5s ease-in both;
-    padding: 0 20px;
-    position: absolute;
-    left: 0; 
-    right: 0;
-    top: 400px;
-    z-index: 10000;
-    margin-left: auto; 
-    margin-right: auto;
-    text-align: center;
-    text-shadow: 3px 3px 7px rgba(225,225,225,.61);
-}
-
-@keyframes slideUp {
-    from {transform: translateY(200%);}
-    to {transform:translateY(-50%);}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+@media screen  and (max-width: 770px) {
+    .glyphicon {
+        width: 120px;
+    }
 }
