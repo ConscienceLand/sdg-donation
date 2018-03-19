@@ -9,5 +9,24 @@
   "Email": "Email",
   "CheckYourEmai": "Check your Email!",
   "Success": "Success",
-  "Error": "Error"
+  "Error": "Error",
+  "AccountTitle": "SDG17index Direction Donation Platform",
+  "AccountRollingText1": "ConscienceLAND - Join the FUN",
+	"AboutUsTitle": "We help you help the world",
+  "AboutUsText": "You can MAKE A DIFFERENCE, - DONATE DIRECTLY to NGO's, and Social Enterprises who are solving he SDG's by 2030",
+  "SupportTitle": "YOU CHOOSE",
+  "SupportText": "Choose your favorite Caring Currency  and add it to the MOUNTAIN OF CRYPTO",
+  "DonateHere": "Donate Here",
+  "HistoryTitle": "Your SDG17index Deposits",
+  "HistoryText": "Thank you for solving the SDG's",
+  "Date": "Date",
+  "Asset": "Asset",
+  "Amount": "Amount",
+  "DonationTitle": "Please Select a Crypto Currency",
+  "DonationText": "Thank you!!!",
+  "CurrencyTitle": "Details",
+  "CurrencyText": "Currency",
+  "CurrencyAddress": "Address",
+  "CurrencyExpiration": "Expires"
+
 }
