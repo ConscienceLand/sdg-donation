@@ -1,26 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+  colors
+ */
+$earth-bg: #17181c;
+$earth-earth: #3380B5;
+$earth-before: #85C567;
+$earth-moon: #A5A5A5;
 
+
+/*
+  Backgrounds
+*/
 .background-earth {
-    background: #17181c;
+    background: $earth-bg;
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: -1;
+    overflow: hidden;
 }
 
 .earth {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: #3380B5;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  z-index:2;
-  box-shadow: 
-    inset -30px 0 rgba(0, 0, 0, 0.2), 
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: $earth-earth;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index:2;
+    box-shadow:
+    inset -30px 0 rgba(0, 0, 0, 0.2),
     0 0 0 120px rgba(20, 106, 221, 0.1),
     0 0 0 300px rgba(20, 106, 221, 0.1),
     0 0 0 500px rgba(20, 106, 221, 0.1);
@@ -28,19 +40,19 @@
 
 /* Land */
 .earth:before {
-  content: "";
-  position: absolute;
-  background: #85C567;
-  height: 30px;
-  width: 75px;
-  left: 0;
-  top: 50px;
-  display:block;
-  border-radius: 40px;
-  animation: rotateElement linear 25s infinite;
-  box-shadow: 
+    content: "";
+    position: absolute;
+    background: $earth-before;
+    height: 30px;
+    width: 75px;
+    left: 0;
+    top: 50px;
+    display:block;
+    border-radius: 40px;
+    animation: rotateElement linear 25s infinite;
+    box-shadow:
     0px 75px 0 -5px #85C567,
-    5px 35px 0 -3px #85C567, 
+    5px 35px 0 -3px #85C567,
     35px 125px 0 -9px #85C567,
     120px -15px 0 -7px #85C567,
     135px -55px 0 -9px #85C567,
@@ -52,7 +64,7 @@
     // Clones 400px over
     400px 0 0 0 #85C567,
     400px 75px 0 -5px #85C567,
-    405px 35px 0 -3px #85C567, 
+    405px 35px 0 -3px #85C567,
     435px 125px 0 -9px #85C567,
     520px -15px 0 -7px #85C567,
     535px -55px 0 -9px #85C567,
@@ -65,18 +77,18 @@
 
 /* Clouds */
 .earth:after {
-  content: "";
-  position: absolute;
-  background: white;
-  height: 20px;
-  width: 60px;
-  left: 0px;
-  top: 50px;
-  display:block;
-  border-radius: 40px;
-  animation: rotateElement linear 15s infinite;
-  box-shadow: 
-    10px 50px 0 3px white, 
+    content: "";
+    position: absolute;
+    background: white;
+    height: 20px;
+    width: 60px;
+    left: 0px;
+    top: 50px;
+    display:block;
+    border-radius: 40px;
+    animation: rotateElement linear 15s infinite;
+    box-shadow:
+    10px 50px 0 3px white,
     50px -15px 0 2px white,
     70px 70px 0 -1px white,
     100px 25px 0 1px white,
@@ -88,7 +100,7 @@
 
     // Clones 400px over
     400px 0px 0 0 white,
-    410px 50px 0 3px white, 
+    410px 50px 0 3px white,
     500px 25px 0 1px white,
     450px -15px 0 2px white,
     470px 70px 0 -1px white,
@@ -100,90 +112,90 @@
 }
 
 .earth--shadow {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  position: absolute;
-  background-color: transparent;
-  z-index: 4;
-  box-shadow: 
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: transparent;
+    z-index: 4;
+    box-shadow:
     inset -30px 0 rgba(0, 0, 0, 0.1);
 }
 
 .moon {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: #A5A5A5;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: auto;
-  z-index:10;
-  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.2);
-  animation: moonOrbit ease-in-out 15s infinite;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: $earth-moon;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    z-index:10;
+    box-shadow: inset -3px 0 rgba(0, 0, 0, 0.2);
+    animation: moonOrbit ease-in-out 15s infinite;
 }
 .moon:after {
-  content: '';
-  height: 5px;
-  width: 5px;
-  border-radius:50%;
-  background: gray;
-  position: absolute;
-  top:8px;
-  left: 10px;
-  box-shadow: 
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius:50%;
+    background: gray;
+    position: absolute;
+    top:8px;
+    left: 10px;
+    box-shadow:
     -4px 3px 0 -1px gray,
     4px 2px 0 -1px gray,
     -2px -6px 0 -1px gray
 }
 
 .stars {
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: auto;
-  z-index:1;
-  box-shadow: 
-    510px -450px 0 1px white, 
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    z-index:1;
+    box-shadow:
+    510px -450px 0 1px white,
     490px -125px 0 -2px white,
     150px -150px 0 -1px white,
     130px 270px 0 -1px white,
     480px 475px 0 -3px white,
     -610px 605px 0 -4px white,
-    570px 750px 0 -3px white, 
+    570px 750px 0 -3px white,
     -550px 425px 0 1px white,
     650px -105px 0 -2px white,
     310px 60px 0 -1px white,
     -340px 175px 0 -3px white,
     -610px 1205px 0 -4px white,
-    500px 450px 0 -3px white, 
+    500px 450px 0 -3px white,
     -500px 125px 0 1px white,
     -150px -615px 0 -2px white,
     -110px -370px 0 -1px white,
     -440px -175px 0 -3px white,
     -610px -205px 0 -4px white,
-    410px -450px 0 -3px white, 
+    410px -450px 0 -3px white,
     390px -125px 0 -2px white,
     50px -250px 0 -1px white,
     30px -170px 0 -1px white,
     380px 375px 0 -5px white,
     -710px 705px 0 -6px white,
-    470px -650px 0 -3px white, 
+    470px -650px 0 -3px white,
     -450px 425px 0 1px white,
     550px -205px 0 -5px white,
     210px 50px 0 -1px white,
     -240px 275px 0 -5px white,
     -510px 120px 0 -4px white,
-    600px 550px 0 -3px white, 
+    600px 550px 0 -3px white,
     -400px 225px 0 1px white,
     -250px -515px 0 -2px white,
     -310px -170px 0 -4px white,
@@ -192,58 +204,91 @@
 }
 
 .inspiration {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: white;
-  font-size: 10px;
-  
-  a {
-   color: white;
-  }
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 10px;
+
+    a {
+        color: white;
+    }
 }
 
 @keyframes rotateElement {
-  0% {transform: translate(0, 0);}
-  100% {transform: translate(-400px, 0);}
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-400px, 0);}
 }
 
 @keyframes moonOrbit {
-  0% {transform: translate(-250px, 0);  z-index: 10}
-  20% {z-index:-1;}
-  50% {transform: translate(250px, 0)}
-  100% {transform: translate(-250px, 0)}
+    0% {transform: translate(-250px, 0);  z-index: 10}
+    20% {z-index:-1;}
+    50% {transform: translate(250px, 0)}
+    100% {transform: translate(-250px, 0)}
 }
 
 .bottom-space {
     padding-bottom: 20px;
 }
 
+
+
 .button {
     color: white;
-  flex: 1 1 auto;
-  margin: auto;
-  padding: 20px;
-  border: 2px solid #f7f7f7;
-  text-align: center;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .3s;
-  &:after {
-    position: absolute;
+    flex: 1 1 auto;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #f7f7f7;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
     transition: .3s;
-    content: '';
-    width: 0;
-    left: 50%;
-    bottom: 0;
-    height: 3px;
-    background: #f7f7f7;
-  }
-  &:hover {
-    cursor: pointer;
     &:after {
-      width: 100%;
-      left: 0;
+        position: absolute;
+        transition: .3s;
+        content: '';
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        height: 3px;
+        background: #f7f7f7;
     }
-  }
+    &:hover {
+        cursor: pointer;
+        &:after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+
+
+/*
+  Animations
+*/
+.page-hero .container {
+    color: #fff;
+    animation:
+    slideUp 0.75s .5s cubic-bezier(0.17,.88,.32,1.27) both,
+    fadeIn .25s .5s ease-in both;
+    padding: 0 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 400px;
+    z-index: 10000;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-shadow: 3px 3px 7px rgba(225,225,225,.61);
+}
+
+@keyframes slideUp {
+    from {transform: translateY(200%);}
+    to {transform:translateY(-50%);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
