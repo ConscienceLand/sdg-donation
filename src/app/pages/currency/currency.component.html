@@ -7,36 +7,35 @@
 
     <div class="page-hero">
         <div class="container">
-            <h1>{{selectedCurrency}} Details</h1>
-            <table id="settings">
-                <tr>
-                    <td>Currency:</td> <td><input type="text" id="qrWidth" value="{{selectedCurrency}}"/></td>
-                    <td id="generateCell" rowspan="7" valign="top"><div id="qr">
-                        <div class="bg">
+            <h1>{{selectedCurrency}} {{"CurrencyTitle"|translate}}</h1>
 
-                            <qrcode [qrdata]="angularxQrCode" [size]="256" [level]="'M'"></qrcode>
-                        </div>
-                    </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Address:</td> <td><input type="text" id="qrHeight" value="kadfkdjafdljafd93343"/></td>
-                </tr>
-                <tr>
-                    <td>Field 1:</td> <td><input type="text" id="qrColor" value="no data"/></td>
-                </tr>
-                <tr>
-                    <td>Field 2: </td> <td><input type="text" id="qrBgColor" value="no data"/></td>
-                </tr>
-                <tr>
-                    <td>Field 3:</td> <td><input type="text" id="qrUrl" value="no data"/></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input id="generate" type="submit" value="Generate" /></td>
-                </tr>
-
+            <div class="circle">
+                <div class="qr-code">
+                    <qrcode [qrdata]="angularxQrCode" [size]="200" [level]="'M'"></qrcode>
+                </div>
+            </div>
+            <table class="poppin-info">
+                <thead>
+                    <tr>
+                        <th><h1></h1></th>
+                        <th><h1></h1></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{"CurrencyText"|translate}}:</td>
+                        <td>{{selectedCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{"CurrencyAddress"|translate}}:</td>
+                        <td>{{currencyAddress}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{"CurrencyExpiration"|translate}}:</td>
+                        <td>{{currencyEnd}}</td>
+                    </tr>
+                </tbody>
             </table>
-
         </div>
     </div>
 </div>
