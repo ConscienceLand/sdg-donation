@@ -8,10 +8,12 @@ import { AlertModule } from 'ngx-bootstrap';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QRCodeModule } from 'angularx-qrcode';
+import { CookieService } from 'ngx-cookie-service';
 
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { DonationService } from './service/donation.service';
 import { AlertService } from './service/alert.service';
@@ -65,12 +67,14 @@ export const createTranslateLoader = (http: HttpClient) => {
         SimpleNotificationsModule.forRoot(),
         RouterModule,
         RouterModule.forRoot(routes),
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        AngularFontAwesomeModule
     ],
     exports: [TranslateModule],
     providers: [
         DonationService,
-        AlertService
+        AlertService,
+        CookieService
     ],
     bootstrap: [AppComponent]
 })
