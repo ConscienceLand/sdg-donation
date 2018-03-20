@@ -3,8 +3,8 @@
     bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
+    left: 20px;
+    right: 20px;
 }
 
 
@@ -17,6 +17,7 @@
 }
 
 .page-hero h1 {
+    overflow:hidden;
     color: #fff;
     animation:
     slideUp 0.75s .5s cubic-bezier(0.17,.88,.32,1.27) both,
