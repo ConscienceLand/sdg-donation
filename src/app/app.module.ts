@@ -9,6 +9,8 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QRCodeModule } from 'angularx-qrcode';
 import { CookieService } from 'ngx-cookie-service';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -68,7 +70,8 @@ export const createTranslateLoader = (http: HttpClient) => {
         RouterModule,
         RouterModule.forRoot(routes),
         BrowserAnimationsModule,
-        AngularFontAwesomeModule
+        AngularFontAwesomeModule,
+        NgxChartsModule
     ],
     exports: [TranslateModule],
     providers: [
