@@ -5,15 +5,16 @@
     <div class="moon"></div>
     <div class="stars"></div>
     <div class="page-hero">
-        <h1>WELCOME</h1>
+        <h1>{{"WECOME"|translate}}</h1>
+    </div>
+
+    <div class="welcome-buttons">
+        <div class="row bottom-space">
+            <div class="button col-sm-6 col-xs-6" (click)="login()">{{"Login"|translate}}</div>
+        </div>
+        <div class="row">
+            <div class="button col-sm-6" (click)="register()">{{"Register"|translate}}</div>
+        </div>
     </div>
 </div>
 
-<div class="welcome-buttons">
-    <div class="row bottom-space">
-        <div class="button col-sm-6" (click)="login()">Login</div>
-    </div>
-    <div class="row">
-        <div class="button col-sm-6 bu" (click)="register()">Register</div>
-    </div>
-</div>
