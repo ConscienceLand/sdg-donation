@@ -34,6 +34,7 @@
 
 .page-hero h1 {
     overflow:hidden;
+    z-index: 100000000;
     color: #fff;
     animation:
     slideUp 0.75s .5s cubic-bezier(0.17,.88,.32,1.27) both,
@@ -48,6 +49,7 @@
 
 .page-hero h2 {
     overflow:hidden;
+    z-index: 10000000;
     color: #fff;
     animation:
     slideUp 0.75s .5s cubic-bezier(0.17,.88,.32,1.27) both,
@@ -68,4 +70,13 @@
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+@media only screen and (max-width: 600px) {
+    .page-hero h2 {
+        top: 70%;
+    }
+    .graph {
+        display: none;
+    }
 }
