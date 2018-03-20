@@ -3,6 +3,14 @@
 }
 
 
+@media only screen and (max-width: 780px) {
+    .gif {
+        display: none;
+    }
+}
+
+
+
 .navbar {
     background-color: transparent;
     border-color: transparent;
@@ -38,6 +46,10 @@
 #know-button:hover {
     background-color: #fff;
     color: #03A9F4;
+}
+
+.about-us {
+    padding-top: 50px;
 }
 
 #info {
