@@ -1,0 +1,19 @@
+sudo: required
+language: node_js
+node_js:
+- 8
+cache:
+  directories:
+  - node_modules
+before_install:
+- npm i
+script:
+- node ./node_modules/@angular/cli/bin/ng build
+deploy:
+  provider: firebase
+  token:
+    secure: "0iK7lWUlS0YXJEczXpNOU1Uc/oaTp8DAkncWLZ3lAHzONnYKf6VsIF9c4Px6uTsG59RFTl//4XTrgP0Vyf4sV5KZrtPB+es4Kb4mWu6QTqJ1okacnXQQmCsj/JZiaTzxN0c7bJV7DREQ9wUs5GaLfztUVDXKVxNwNATgFE55tsyhUpRFk/mPO0/joeQYxI/4CERg0LSm+9CxL5zml8fkosdfnTCiX5osFr2CjN34uac2FYhp0apiE3yCTWMLqTV0Vg4vrq/5S0StVE1o7TwIS5hp7g/8EcSLO2MtvU4sdx2U8fA/b5Zp8xLYXr/hG4Xz/7eOhAYB7UHr5xi4E2BqPlPjQj/8901ixOL8S6x2gt5FcN+J3VrrBnzlJ9BaIDMKt5Nb6eIUbevFraoV7/ii2eGXJc4NqbeJ/cw/fi4VjzzZOJEjpjCjB4wPiVBBvgx7WgDRAoo+0W5la+K6AqO0zcI5G4mDn2Y6P91bzLKUEGSn3HmYb6NOLD2w2dl+9C28XRky7IUGohDlBqVs0Ek+gf4tAn2Rl1hct7PX7SRazGwgC3DbLJmif/CJEGmb9FMIuAuEJJ/U+nzs94IrZBHOC+WPJ3rv8NQ+H17FODpoRvMM6+wZuFnbmAECOU8rW+3o+NEOzwcsGx/QG0amyBUH5rewB/dyX8HV+oIzBcB1DGY="
+  project: "sdg-frontend"
+  skip_cleanup: true
+  on:
+    branch: master
