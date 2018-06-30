@@ -17,7 +17,6 @@ export class DonationComponent implements OnInit {
     }
 
     gotoCurrency(currency:string) {
-        console.log(currency)
         this.router.navigate(['donation', currency]);
     }
 }

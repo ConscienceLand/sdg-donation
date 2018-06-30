@@ -18,7 +18,6 @@ export class AccountComponent implements OnInit {
 
     ngOnInit() {
         this.translate.get('AccountRollingText1').subscribe((res: string) => {
-            console.log(res);
             this.consoleText([res, res, res], 'text',['tomato','rebeccapurple','lightblue']);
         });
 
@@ -27,9 +26,6 @@ export class AccountComponent implements OnInit {
 
         // Test code: SU677A7ESQZVT7BSZ5Y55S9CWBJF29
 				this.donation.deposits(code).then((response:any)=>{
-            //testing
-            console.log(response.result);
-
             // No history/deposits
             if(response.result.length == 0)
                 this.gotHistory = false;

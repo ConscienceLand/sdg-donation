@@ -24,16 +24,14 @@ export class CurrencyComponent implements OnInit {
     ngOnInit() {
 
         this.route.params.subscribe( params => {
-	if(params.currency)
-            this.selectedCurrency = params.currency.toUpperCase();
-            console.log(params)
+	          if(params.currency)
+              this.selectedCurrency = params.currency.toUpperCase();
 
             // need check
             let code = this.cookieService.get('code');
 
             // Test code: SU677A7ESQZVT7BSZ5Y55S9CWBJF29
             this.donation.address(code, this.selectedCurrency).then((response:any)=> {
-                console.log(response);
                 this.currencyAddress = response.result.address;
                 this.currencyEnd = new Date(response.result.end*1000);
                 this.angularxQrCode = this.currencyAddress;
