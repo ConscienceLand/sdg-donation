@@ -23,10 +23,5 @@ describe('DonationService', () => {
                 expect(result).toEqual({ message: 'SUC_USER_EXISTS' });
                 done()
             })
-            .catch((error) => {
-                console.log(error)
-                expect(error.message).toBe(null)
-                done()
-            })
     });
 });

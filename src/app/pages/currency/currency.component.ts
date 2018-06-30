@@ -24,9 +24,9 @@ export class CurrencyComponent implements OnInit {
     ngOnInit() {
 
         this.route.params.subscribe( params => {
+	if(params.currency)
             this.selectedCurrency = params.currency.toUpperCase();
             console.log(params)
-
 
             // need check
             let code = this.cookieService.get('code');
