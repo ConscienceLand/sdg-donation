@@ -4,7 +4,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 @Injectable()
 export class DonationService {
 
-    private SERVER='https://donations.caringcurrency.com/api/';
+    private SERVER='https://api.caringcurrency.com/';
 
     constructor(private http: HttpClient) { }
 

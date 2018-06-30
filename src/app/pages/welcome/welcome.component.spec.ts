@@ -3,6 +3,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome.component';
 
 import { RouterTestingModule } from '@angular/router/testing'
+import { TranslateModule } from '@ngx-translate/core';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {APP_BASE_HREF} from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 describe('WelcomeComponent', () => {
   let component: WelcomeComponent;
@@ -11,7 +16,12 @@ describe('WelcomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
         declarations: [ WelcomeComponent ],
-        imports:[RouterTestingModule, FormsModule ]
+        imports:[RouterTestingModule,
+                 TranslateModule.forRoot(),
+                 BrowserAnimationsModule,
+                 NgxChartsModule,
+                 FormsModule ],
+        providers: [{provide: APP_BASE_HREF, useValue: '/'}]
     })
     .compileComponents();
   }));

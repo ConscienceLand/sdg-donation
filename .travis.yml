@@ -9,6 +9,7 @@ before_install:
 - npm i
 script:
 - node ./node_modules/@angular/cli/bin/ng build
+- npm test -- --singleRun true --browsers ChromeHeadless,FirefoxHeadless
 deploy:
   - provider: firebase
     token:

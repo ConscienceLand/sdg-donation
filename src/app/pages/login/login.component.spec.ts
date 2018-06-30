@@ -9,6 +9,8 @@ import { AlertService } from '../../service/alert.service';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { CookieService } from 'ngx-cookie-service';
+
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
@@ -22,7 +24,7 @@ describe('LoginComponent', () => {
                  SimpleNotificationsModule.forRoot(),
                  TranslateModule.forRoot()
                 ],
-        providers: [ DonationService, AlertService ]
+        providers: [ DonationService, AlertService, CookieService]
     })
     .compileComponents();
   }));
