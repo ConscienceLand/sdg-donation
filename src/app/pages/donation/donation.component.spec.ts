@@ -3,6 +3,8 @@ import { RouterTestingModule } from '@angular/router/testing'
 
 import { DonationComponent } from './donation.component';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 describe('DonationComponent', () => {
   let component: DonationComponent;
   let fixture: ComponentFixture<DonationComponent>;
@@ -10,7 +12,9 @@ describe('DonationComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
         declarations: [ DonationComponent ],
-        imports: [ RouterTestingModule ]
+        imports: [ RouterTestingModule,
+                   TranslateModule.forRoot()
+                 ]
     })
     .compileComponents();
   }));
