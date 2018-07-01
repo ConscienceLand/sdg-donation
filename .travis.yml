@@ -9,17 +9,23 @@ script:
 - node ./node_modules/@angular/cli/bin/ng build
 - npm test -- --singleRun true --browsers ChromeHeadless,FirefoxHeadless
 deploy:
-  - provider: firebase
-    token:
-      secure: "0iK7lWUlS0YXJEczXpNOU1Uc/oaTp8DAkncWLZ3lAHzONnYKf6VsIF9c4Px6uTsG59RFTl//4XTrgP0Vyf4sV5KZrtPB+es4Kb4mWu6QTqJ1okacnXQQmCsj/JZiaTzxN0c7bJV7DREQ9wUs5GaLfztUVDXKVxNwNATgFE55tsyhUpRFk/mPO0/joeQYxI/4CERg0LSm+9CxL5zml8fkosdfnTCiX5osFr2CjN34uac2FYhp0apiE3yCTWMLqTV0Vg4vrq/5S0StVE1o7TwIS5hp7g/8EcSLO2MtvU4sdx2U8fA/b5Zp8xLYXr/hG4Xz/7eOhAYB7UHr5xi4E2BqPlPjQj/8901ixOL8S6x2gt5FcN+J3VrrBnzlJ9BaIDMKt5Nb6eIUbevFraoV7/ii2eGXJc4NqbeJ/cw/fi4VjzzZOJEjpjCjB4wPiVBBvgx7WgDRAoo+0W5la+K6AqO0zcI5G4mDn2Y6P91bzLKUEGSn3HmYb6NOLD2w2dl+9C28XRky7IUGohDlBqVs0Ek+gf4tAn2Rl1hct7PX7SRazGwgC3DbLJmif/CJEGmb9FMIuAuEJJ/U+nzs94IrZBHOC+WPJ3rv8NQ+H17FODpoRvMM6+wZuFnbmAECOU8rW+3o+NEOzwcsGx/QG0amyBUH5rewB/dyX8HV+oIzBcB1DGY="
-    project: "sdg-frontend"
-    skip_cleanup: true
-    on:
-      branch: master
-  - provider: firebase
-    token:
-      secure: "0iK7lWUlS0YXJEczXpNOU1Uc/oaTp8DAkncWLZ3lAHzONnYKf6VsIF9c4Px6uTsG59RFTl//4XTrgP0Vyf4sV5KZrtPB+es4Kb4mWu6QTqJ1okacnXQQmCsj/JZiaTzxN0c7bJV7DREQ9wUs5GaLfztUVDXKVxNwNATgFE55tsyhUpRFk/mPO0/joeQYxI/4CERg0LSm+9CxL5zml8fkosdfnTCiX5osFr2CjN34uac2FYhp0apiE3yCTWMLqTV0Vg4vrq/5S0StVE1o7TwIS5hp7g/8EcSLO2MtvU4sdx2U8fA/b5Zp8xLYXr/hG4Xz/7eOhAYB7UHr5xi4E2BqPlPjQj/8901ixOL8S6x2gt5FcN+J3VrrBnzlJ9BaIDMKt5Nb6eIUbevFraoV7/ii2eGXJc4NqbeJ/cw/fi4VjzzZOJEjpjCjB4wPiVBBvgx7WgDRAoo+0W5la+K6AqO0zcI5G4mDn2Y6P91bzLKUEGSn3HmYb6NOLD2w2dl+9C28XRky7IUGohDlBqVs0Ek+gf4tAn2Rl1hct7PX7SRazGwgC3DbLJmif/CJEGmb9FMIuAuEJJ/U+nzs94IrZBHOC+WPJ3rv8NQ+H17FODpoRvMM6+wZuFnbmAECOU8rW+3o+NEOzwcsGx/QG0amyBUH5rewB/dyX8HV+oIzBcB1DGY="
-    project: "sdg-frontend-dev"
-    skip_cleanup: true
-    on:
-      branch: dev
+- provider: firebase
+  token:
+    secure: 0iK7lWUlS0YXJEczXpNOU1Uc/oaTp8DAkncWLZ3lAHzONnYKf6VsIF9c4Px6uTsG59RFTl//4XTrgP0Vyf4sV5KZrtPB+es4Kb4mWu6QTqJ1okacnXQQmCsj/JZiaTzxN0c7bJV7DREQ9wUs5GaLfztUVDXKVxNwNATgFE55tsyhUpRFk/mPO0/joeQYxI/4CERg0LSm+9CxL5zml8fkosdfnTCiX5osFr2CjN34uac2FYhp0apiE3yCTWMLqTV0Vg4vrq/5S0StVE1o7TwIS5hp7g/8EcSLO2MtvU4sdx2U8fA/b5Zp8xLYXr/hG4Xz/7eOhAYB7UHr5xi4E2BqPlPjQj/8901ixOL8S6x2gt5FcN+J3VrrBnzlJ9BaIDMKt5Nb6eIUbevFraoV7/ii2eGXJc4NqbeJ/cw/fi4VjzzZOJEjpjCjB4wPiVBBvgx7WgDRAoo+0W5la+K6AqO0zcI5G4mDn2Y6P91bzLKUEGSn3HmYb6NOLD2w2dl+9C28XRky7IUGohDlBqVs0Ek+gf4tAn2Rl1hct7PX7SRazGwgC3DbLJmif/CJEGmb9FMIuAuEJJ/U+nzs94IrZBHOC+WPJ3rv8NQ+H17FODpoRvMM6+wZuFnbmAECOU8rW+3o+NEOzwcsGx/QG0amyBUH5rewB/dyX8HV+oIzBcB1DGY=
+  project: sdg-frontend
+  skip_cleanup: true
+  on:
+    branch: master
+- provider: firebase
+  token:
+    secure: 0iK7lWUlS0YXJEczXpNOU1Uc/oaTp8DAkncWLZ3lAHzONnYKf6VsIF9c4Px6uTsG59RFTl//4XTrgP0Vyf4sV5KZrtPB+es4Kb4mWu6QTqJ1okacnXQQmCsj/JZiaTzxN0c7bJV7DREQ9wUs5GaLfztUVDXKVxNwNATgFE55tsyhUpRFk/mPO0/joeQYxI/4CERg0LSm+9CxL5zml8fkosdfnTCiX5osFr2CjN34uac2FYhp0apiE3yCTWMLqTV0Vg4vrq/5S0StVE1o7TwIS5hp7g/8EcSLO2MtvU4sdx2U8fA/b5Zp8xLYXr/hG4Xz/7eOhAYB7UHr5xi4E2BqPlPjQj/8901ixOL8S6x2gt5FcN+J3VrrBnzlJ9BaIDMKt5Nb6eIUbevFraoV7/ii2eGXJc4NqbeJ/cw/fi4VjzzZOJEjpjCjB4wPiVBBvgx7WgDRAoo+0W5la+K6AqO0zcI5G4mDn2Y6P91bzLKUEGSn3HmYb6NOLD2w2dl+9C28XRky7IUGohDlBqVs0Ek+gf4tAn2Rl1hct7PX7SRazGwgC3DbLJmif/CJEGmb9FMIuAuEJJ/U+nzs94IrZBHOC+WPJ3rv8NQ+H17FODpoRvMM6+wZuFnbmAECOU8rW+3o+NEOzwcsGx/QG0amyBUH5rewB/dyX8HV+oIzBcB1DGY=
+  project: sdg-frontend-dev
+  skip_cleanup: true
+  on:
+    branch: dev
+notifications:
+  pushover:
+    api_key:
+      secure: W0YeF/8OBc4Kx815eKGfdVaQWtnKWo5I6y8bWDsJlzRHTP769ouZv2aLSfZHc1lPRKAOI5+rF7uEllqs09ZTeSwTzDqZDbCUt7B8F3+/7u6h2oyEMyWIA9dFM5XlTxbcXolaYLOKCyHJ31AZVh7yuGuso/ZWim/iMn0kJ8QCjhg4/mQ/o56ujCaENcoYIzqfQhtKn2yVqiwCVDjEBmWvTVKFzQNiaaYDpRavWgf8zMYnB/vnxPlTjZiKzO+xNHJ2aeS6WyjUYluemaMqplbYFY2+aMd2O9v2v39ZCxRsB19w6sFNVyF1DRX70GbFk4rgfYd0pdvfIF2Vxg7Yl3Kgq+kuxCQ1qlC0xUlpH/ByR0zTMpXys5YgWvOWaYxiEMlBRNvGZLAvmsCQID6MwyLxXh3SEG/9+F5t/WjvHQ/JEVsDHfZUZBp8mY4ZZfcWj/+hQjca6urv6pR9ppT1jXsroUvt+w56zgKm70y5V2NBSMpVgBTGAPAPaAi51PvNhrVUIdBKHqIrVnuTTuTHyHrCNeGNen/1u7DxWTAP/Qjd4kpEGGIC8Vu46LtgTnV6aTM/2wG+frM/KhRBnz8d7jHRe11/SqF4F/gUgoWCaG0VVCXuf2VblDK3743vEWYB0GDZ2ksJbt9RquFAOn8tmVnhN5RWf5Mu1ICP9DdXoGYERcg=
+    users:
+      secure: ET/GLgkP6ftgFLFXewkM4Z+YRiFRgoYWAHYADs0gYEIkIwT4KgeW+pY0ie1zc1YcNsH7EULoAZ866A/1hZ0Cu5IZyKnrWlNQqQluSMyyhfnNRO1rAJvqOnZv6lEIapYe+fU0+WDHKa/t9iYXeXvIVgir2T9F2q9T0wR7MImLLNXOmoB/tEvjjTLiHyynUqXP+ERRCl1dFYJ+KkmL9FB8xQ8aXXKjidKKWV5vTJ/hlyt5VieG2BbJQHjkxpqldHtCbOP4AXwVTSTxo4/hIp/pdB6QLTny7/wHSbrLaCYKL5oBTG5wUZ6f5QkTby/3BwfwiT5yjAWQDeMa9JT8ydZU/aVywSYZaNIYo05fQEwBJRLZ50aWfRGhMupjZE3bkN1RvP9fWGwd9W61Bkb2N9JMX2WQLo833Bhb2GfPrNeC+OT8pAs0PHRJNUehJ+7vJhQx6Pjc4vBqspJ/pKcGQnD4JYBl9QfM/lwyfLnwcbwPqhOB7NP3NQLTe0si+l6hhgfJkqXMnsV4MbwD10z05FLbHVCRQ2lKdGcBQo94Zq7GOPJyz2kJJ4Qel2YWBzsbHo4oyMj701nMvUMtKrf+heYc70lSW9/8jfkEP9iuTd0OvwVhrVW8H0HVxtdvtJ4sc+JiRuhrvm3gSe08EO7LaVLHmLT+wYyGugdmm6hsjqNtYjk=
